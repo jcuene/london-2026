@@ -2,7 +2,7 @@
   "name": "London 2026",
   "short_name": "London 2026",
   "description": "London trip itinerary — May 2–9, 2026",
-  "start_url": "/",
+  "start_url": "/london-2026/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#012169",
