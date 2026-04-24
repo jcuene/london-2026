@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#012169" />
+  <meta name="description" content="London 2026 trip itinerary — May 2–9" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="London 2026" />
+  <title>London 2026</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="header-flag">
+        <span class="flag-bar flag-blue"></span>
+        <span class="flag-bar flag-red"></span>
+        <span class="flag-bar flag-blue"></span>
+      </div>
+      <h1>London 2026</h1>
+      <div class="header-dates">May 2–9, 2026</div>
+    </div>
+  </header>
+
+  <!-- Day selector -->
+  <nav id="day-nav" class="day-nav" role="navigation" aria-label="Day selector"></nav>
+
+  <!-- Main content area -->
+  <main id="main"></main>
+
+  <!-- Bottom nav -->
+  <nav class="bottom-nav" role="navigation" aria-label="Main navigation">
+    <button class="nav-btn active" data-tab="schedule" onclick="showTab('schedule')">
+      <span class="nav-icon">📅</span>
+      <span class="nav-label">Schedule</span>
+    </button>
+    <button class="nav-btn" data-tab="pubs" onclick="showTab('pubs')">
+      <span class="nav-icon">🍺</span>
+      <span class="nav-label">Pubs</span>
+    </button>
+    <button class="nav-btn" data-tab="eats" onclick="showTab('eats')">
+      <span class="nav-icon">🍽</span>
+      <span class="nav-label">Eats</span>
+    </button>
+    <button class="nav-btn" data-tab="info" onclick="showTab('info')">
+      <span class="nav-icon">ℹ️</span>
+      <span class="nav-label">Info</span>
+    </button>
+  </nav>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
